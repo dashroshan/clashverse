@@ -1,0 +1,8 @@
+discord.py==1.7.2
+coc.py==1.2.1
+pymongo==3.11.4
+discord_py_slash_command==2.2.0
+dnspython==2.1.0
+Pillow==8.4.0
+requests==2.25.1
+topggpy==1.3.0
