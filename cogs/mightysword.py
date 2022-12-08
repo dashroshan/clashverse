@@ -189,6 +189,7 @@ class Swordtracker(commands.Cog):
         ],
     )
     async def miss(self, ctx, tag: str):
+        await ctx.defer()
         if ctx.channel.id == swordchannel:
             if tag[0] == "#":
                 tosend = await self.dbmiss(tag)
@@ -204,6 +205,7 @@ class Swordtracker(commands.Cog):
         guild_ids=[401447829395996692],
     )
     async def info(self, ctx):
+        await ctx.defer()
         if ctx.channel.id == swordchannel:
             tosend = await self.dbinfoall()
             await ctx.send(tosend)
@@ -224,6 +226,7 @@ class Swordtracker(commands.Cog):
         ],
     )
     async def clear(self, ctx, tag: str):
+        await ctx.defer()
         if ctx.channel.id == swordchannel:
             if tag[0] == "#":
                 tosend = await self.dbclear(tag)
