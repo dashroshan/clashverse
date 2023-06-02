@@ -15,7 +15,7 @@ from io import StringIO
 import topgg
 
 helpselectimgs = {
-    "desc": "To learn how to use the different features available on ClashVerse, use the selection box below. Feel free to join the support server if you need additional assistance.\n\n**[Invite ClashVerse to another server](https://clashverse.roshan.cyou/i)\n[Join support server](https://clashverse.roshan.cyou/s)**",
+    "desc": "To learn how to use the different features available on ClashVerse, use the selection box below. Feel free to join the support server if you need additional assistance.\n\n**[Invite ClashVerse to another server](https://clashverse.dashroshan.com/i)\n[Join support server](https://clashverse.dashroshan.com/s)**",
     "0": "https://i.imgur.com/Qzexa94.jpg",
     "1": "https://i.imgur.com/hZTk9EP.jpg",
     "2": "https://i.imgur.com/5ZjNWpg.jpg",
@@ -87,7 +87,7 @@ class Generalcmnds(commands.Cog):
         )
         embed = discord_Embed(
             title="ClashVerse | Clash of Clans discord bot",
-            url="https://clashverse.roshan.cyou",
+            url="https://clashverse.dashroshan.com",
             color=0x108ADF,
             description=helpselectimgs["desc"],
         )
@@ -99,7 +99,7 @@ class Generalcmnds(commands.Cog):
         if ctx.custom_id == "helpselect":
             embed = discord_Embed(
                 title="ClashVerse | Clash of Clans discord bot",
-                url="https://clashverse.roshan.cyou",
+                url="https://clashverse.dashroshan.com",
                 color=0x108ADF,
                 description=helpselectimgs["desc"],
             )
