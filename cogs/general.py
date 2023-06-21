@@ -8,7 +8,7 @@ from discord_slash.utils.manage_components import (
     create_actionrow,
     create_button,
 )
-from secret import testguild, statguild
+from secret import testguild, statguild, topgg_token, statchannel
 from discord import Embed as discord_Embed, File as discord_File
 from discord.utils import find as utils_find
 from io import StringIO
@@ -33,7 +33,7 @@ class Generalcmnds(commands.Cog):
         self.bot = bot
         self.topggpy = topgg.DBLClient(
             bot,
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijg2NjczMzAyNjY2NzAwMzkwNCIsImJvdCI6dHJ1ZSwiaWF0IjoxNjI3NDYzNjA2fQ.0t94CrfFGIi15dRVDoFcmgKT5TNmX6Q5RJMALFWTNtc",
+            topgg_token,
         )
 
     async def aboutmsg(self, ctx):
@@ -123,7 +123,7 @@ class Generalcmnds(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        logc = self.bot.get_channel(861717095740604426)
+        logc = self.bot.get_channel(statchannel)
         botc, userc = 0, 0
         for m in guild.members:
             if m.bot == True:
@@ -135,8 +135,8 @@ class Generalcmnds(commands.Cog):
         )
         for channel in guild.text_channels:
             if (
-                channel.permissions_for(guild.me).attach_files
-                and channel.permissions_for(guild.me).send_messages
+                    channel.permissions_for(guild.me).attach_files
+                    and channel.permissions_for(guild.me).send_messages
             ):
                 await errorimg(
                     "It's an honour to be welcomed here Chief! To access the user guide send /clashverse",
@@ -149,7 +149,7 @@ class Generalcmnds(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_remove(self, guild):
-        logc = self.bot.get_channel(861717095740604426)
+        logc = self.bot.get_channel(statchannel)
         botc, userc = 0, 0
         for m in guild.members:
             if m.bot == True:

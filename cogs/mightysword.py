@@ -2,7 +2,7 @@
 from discord.ext import commands
 import pymongo
 from datetime import datetime, timedelta
-from secret import mongodb_url, swordchannel
+from secret import mongodb_url, swordchannel, swordguild
 from discord_slash import cog_ext
 from discord_slash.utils.manage_commands import create_option
 
@@ -105,12 +105,12 @@ class Swordtracker(commands.Cog):
         record = collection.find_one({"tag": tag})
         misscount = record["misscount"]
         msg = (
-            "**Name: **"
-            + record["name"]
-            + "\n**Attacks missed: **"
-            + str(record["misscount"])
-            + "\n**1st miss: **"
-            + str(record["misses"][0].date())
+                "**Name: **"
+                + record["name"]
+                + "\n**Attacks missed: **"
+                + str(record["misscount"])
+                + "\n**1st miss: **"
+                + str(record["misses"][0].date())
         )
         if misscount == 2:
             msg += "\n**2nd miss: **" + str(record["misses"][1].date())
@@ -126,24 +126,24 @@ class Swordtracker(commands.Cog):
             msg += "`" + "None".ljust(40, " ") + "`\n"
         for i in collection.find({"misscount": 2}):
             msg += (
-                "`"
-                + i["name"].ljust(15, " ")
-                + " "
-                + str(i["misses"][0].date())
-                + "    "
-                + str(i["misses"][1].date())
-                + "`\n"
+                    "`"
+                    + i["name"].ljust(15, " ")
+                    + " "
+                    + str(i["misses"][0].date())
+                    + "    "
+                    + str(i["misses"][1].date())
+                    + "`\n"
             )
         msg += "**Missed one war attack:**\n"
         if countone == 0:
             msg += "`" + "None".ljust(40, " ") + "`\n"
         for j in collection.find({"misscount": 1}):
             msg += (
-                "`"
-                + j["name"].ljust(15, " ")
-                + " "
-                + str(j["misses"][0].date())
-                + "              `\n"
+                    "`"
+                    + j["name"].ljust(15, " ")
+                    + " "
+                    + str(j["misses"][0].date())
+                    + "              `\n"
             )
         return msg
 
@@ -178,7 +178,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-miss",
         description="Save war miss record of a member",
-        guild_ids=[401447829395996692],
+        guild_ids=swordguild,
         options=[
             create_option(
                 name="tag",
@@ -202,7 +202,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-info",
         description="Get all war miss records",
-        guild_ids=[401447829395996692],
+        guild_ids=swordguild,
     )
     async def info(self, ctx):
         await ctx.defer()
@@ -215,7 +215,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-clear",
         description="Clear war miss records of a member",
-        guild_ids=[401447829395996692],
+        guild_ids=swordguild,
         options=[
             create_option(
                 name="tag",

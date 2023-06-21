@@ -96,7 +96,7 @@ async def reminderloop(disbot):
     if count == 0:
         return
     for data in collection.find(
-        {"type": "reminder", "day": int(date.day), "month": int(date.strftime("%m"))}
+            {"type": "reminder", "day": int(date.day), "month": int(date.strftime("%m"))}
     ):
         try:
             user = disbot.get_user(data["user"])

@@ -130,16 +130,16 @@ class Zapquake(commands.Cog):
         ],
     )
     async def _zqfind(
-        self,
-        ctx: SlashContext,
-        defense: str,
-        level: int,
-        zap: str,
-        quake: str,
-        cc_space: str,
-        cc_zap: str,
-        cc_quake: str,
-        warden: int = 0,
+            self,
+            ctx: SlashContext,
+            defense: str,
+            level: int,
+            zap: str,
+            quake: str,
+            cc_space: str,
+            cc_zap: str,
+            cc_quake: str,
+            warden: int = 0,
     ):
         await ctx.defer()
         await zqprocess(
