@@ -251,7 +251,7 @@ async def clanwar_lineupfn(ctx, tag, cocc):
     labelmimg = Image.open("utility/assets/war/dataimgmask.png")
     labelcimg = Image.open("utility/assets/war/clanslabel.png")
     printdata = [
-        printdata[i * 5 : (i + 1) * 5] for i in range((len(printdata) + 5 - 1) // 5)
+        printdata[i * 5: (i + 1) * 5] for i in range((len(printdata) + 5 - 1) // 5)
     ]
     firstsubdata = True
     posid = 0
@@ -480,13 +480,13 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
         def1, def2 = {}, {}
         for attack in war.attacks:
             if (
-                attack.attacker.is_opponent == False
-                and def2.get(attack.defender_tag, 0) <= attack.stars
+                    attack.attacker.is_opponent == False
+                    and def2.get(attack.defender_tag, 0) <= attack.stars
             ):
                 def2[attack.defender_tag] = attack.stars
             elif (
-                attack.attacker.is_opponent == True
-                and def1.get(attack.defender_tag, 0) <= attack.stars
+                    attack.attacker.is_opponent == True
+                    and def1.get(attack.defender_tag, 0) <= attack.stars
             ):
                 def1[attack.defender_tag] = attack.stars
             star1, star2 = {0: 0, 1: 0, 2: 0, 3: 0}, {0: 0, 1: 0, 2: 0, 3: 0}
@@ -495,22 +495,22 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
             for i in def2:
                 star2[def2[i]] += 1
             wdata["stars2"] = (
-                str(star1[3]).zfill(2)
-                + "\n"
-                + str(star1[2]).zfill(2)
-                + "\n"
-                + str(star1[1]).zfill(2)
-                + "\n"
-                + str(star1[0]).zfill(2)
+                    str(star1[3]).zfill(2)
+                    + "\n"
+                    + str(star1[2]).zfill(2)
+                    + "\n"
+                    + str(star1[1]).zfill(2)
+                    + "\n"
+                    + str(star1[0]).zfill(2)
             )
             wdata["stars1"] = (
-                str(star2[3]).zfill(2)
-                + "\n"
-                + str(star2[2]).zfill(2)
-                + "\n"
-                + str(star2[1]).zfill(2)
-                + "\n"
-                + str(star2[0]).zfill(2)
+                    str(star2[3]).zfill(2)
+                    + "\n"
+                    + str(star2[2]).zfill(2)
+                    + "\n"
+                    + str(star2[1]).zfill(2)
+                    + "\n"
+                    + str(star2[0]).zfill(2)
             )
     elif endt.days < 0:
         await errorimg(f"Clan is not at war right now Chief!", 1, ctx, True)
@@ -526,7 +526,7 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
     wdata["badge1"], wdata["badge2"] = war.clan.badge.small, war.opponent.badge.small
     wdata["name1"], wdata["name2"] = war.clan.name, war.opponent.name
     wdata["star"] = (
-        str(war.clan.stars).zfill(2) + " - " + str(war.opponent.stars).zfill(2)
+            str(war.clan.stars).zfill(2) + " - " + str(war.opponent.stars).zfill(2)
     )
     wdata["attack1"], wdata["attack2"] = str(war.clan.attacks_used) + "/" + str(
         war.team_size * nofattack
@@ -730,7 +730,7 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
         image.seek(0)
         await ctx.send(
             file=discord_File(fp=image, filename=f"scoreboard.png"),
-            #components=[
+            # components=[
             #    create_actionrow(
             #        create_button(
             #            style=ButtonStyle.URL,
@@ -738,7 +738,7 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
             #            url=f"https://cocp.it/clan/{(war.opponent.tag)[1:]}",
             #        )
             #    )
-            #],
+            # ],
         )
 
 
@@ -1381,7 +1381,7 @@ async def clanstatsfn(ctx, tag, cocc):
             img = img.convert("P", palette=Image.ADAPTIVE)
             img.save(image, "PNG")
             image.seek(0)
-            files.append(discord_File(fp=image, filename=f"clan{i+1}.png"))
+            files.append(discord_File(fp=image, filename=f"clan{i + 1}.png"))
     await ctx.send(files=files)
 
 
@@ -1516,7 +1516,7 @@ async def clansuperfn(troop, tag, ctx, cocc):
     if len(data) > 7:
         data = data[7:]
         for j in range(ceil(len(data) / 14)):
-            newdata = data[j * 14 : 14 + j * 14]
+            newdata = data[j * 14: 14 + j * 14]
             img = Image.open("utility/assets/super/panelnext.png")
             draw = ImageDraw.Draw(img)
 
@@ -1563,5 +1563,5 @@ async def clansuperfn(troop, tag, ctx, cocc):
                 img = img.convert("P", palette=Image.ADAPTIVE)
                 img.save(image, "PNG")
                 image.seek(0)
-                files.append(discord_File(fp=image, filename=f"super{j+2}.png"))
+                files.append(discord_File(fp=image, filename=f"super{j + 2}.png"))
     await ctx.send(files=files)

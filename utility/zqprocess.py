@@ -49,7 +49,7 @@ aura = [
 ]
 
 hp = [
-    { "name": "0 Ignore", "hp": [1] },
+    {"name": "0 Ignore", "hp": [1]},
     {
         "name": "Archer Queen",
         "hp": [
@@ -180,12 +180,10 @@ hp = [
     },
 ]
 
-
 dmg = [
     [5, 14.5, 17, 21, 25, 29],
     [10, 150, 180, 210, 240, 270, 320, 400, 480, 560, 600],
 ]
-
 
 font = ImageFont.truetype("utility/assets/thick.ttf", 18)
 zapimg = Image.open("utility/assets/zapquake/zqzap.png")
@@ -194,17 +192,17 @@ maximg = Image.open("utility/assets/zapquake/zqmax.png")
 
 
 async def img1(
-    icount,
-    zap,
-    zaplvl,
-    quake,
-    quakelvl,
-    cczap,
-    cczaplvl,
-    ccquake,
-    ccquakelvl,
-    bname,
-    blvl,
+        icount,
+        zap,
+        zaplvl,
+        quake,
+        quakelvl,
+        cczap,
+        cczaplvl,
+        ccquake,
+        ccquakelvl,
+        bname,
+        blvl,
 ):
     img = Image.open("utility/assets/zapquake/zqtabfirst.png")
     draw = ImageDraw.Draw(img)
@@ -401,7 +399,7 @@ async def img1(
 
 
 async def img2(
-    icount, zap, zaplvl, quake, quakelvl, cczap, cczaplvl, ccquake, ccquakelvl
+        icount, zap, zaplvl, quake, quakelvl, cczap, cczaplvl, ccquake, ccquakelvl
 ):
     img = Image.open("utility/assets/zapquake/zqtabrest.png")
     draw = ImageDraw.Draw(img)
@@ -590,7 +588,7 @@ async def zqprocess(ctx, bid, lvl, zap, eq, ccspc, cczap, cceq, warden=0):
         )
         return
     if (
-        warden > 60 or warden < 0
+            warden > 60 or warden < 0
     ):  # enemy warden level given exceeds in-game levels or negetive
         await errorimg(
             "The enemy warden level doesn't appear to be valid Chief!", 3, ctx, True
@@ -624,7 +622,7 @@ async def zqprocess(ctx, bid, lvl, zap, eq, ccspc, cczap, cceq, warden=0):
 
 
 def adjustWardenAura(buildingHp, wardenLvl, buildingId):
-    if buildingId>3:
+    if buildingId > 3:
         return buildingHp
     if wardenLvl > 40:
         wardenLvl = 40
@@ -636,7 +634,7 @@ def adjustWardenAura(buildingHp, wardenLvl, buildingId):
 
 
 def getCombos(
-    buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, ccEqLvl, wardenLvl
+        buildingId, buildingLvl, zapLvl, eqLvl, ccSpace, ccZapLvl, ccEqLvl, wardenLvl
 ):
     buildingHp = adjustWardenAura(hp[buildingId]["hp"][buildingLvl], wardenLvl, buildingId)
     zapDmg = dmg[1][zapLvl]
@@ -650,7 +648,8 @@ def getCombos(
         for e in range(15):
             for cz in range(ccSpace + 1):
                 for ce in range(ccSpace + 1):
-                    if z + e + cz + ce <= 14 and ((isHero and e == 0 and ce == 0) or not isHero) and (cz+ce<=ccSpace):
+                    if z + e + cz + ce <= 14 and ((isHero and e == 0 and ce == 0) or not isHero) and (
+                            cz + ce <= ccSpace):
                         combos.append([z + e + cz + ce, z, e, cz, ce, cz + ce])
 
     validCombos = []

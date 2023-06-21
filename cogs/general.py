@@ -135,8 +135,8 @@ class Generalcmnds(commands.Cog):
         )
         for channel in guild.text_channels:
             if (
-                channel.permissions_for(guild.me).attach_files
-                and channel.permissions_for(guild.me).send_messages
+                    channel.permissions_for(guild.me).attach_files
+                    and channel.permissions_for(guild.me).send_messages
             ):
                 await errorimg(
                     "It's an honour to be welcomed here Chief! To access the user guide send /clashverse",

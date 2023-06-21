@@ -42,17 +42,17 @@ class Servercmd(commands.Cog):
                 )
 
     async def rolebuttons(
-        self,
-        role_1,
-        role_2,
-        role_3,
-        role_4,
-        role_5,
-        role_6,
-        role_7,
-        role_8,
-        role_9,
-        role_10,
+            self,
+            role_1,
+            role_2,
+            role_3,
+            role_4,
+            role_5,
+            role_6,
+            role_7,
+            role_8,
+            role_9,
+            role_10,
     ):
         roles = []
         if role_1 != None and (role_1 not in roles):
@@ -78,7 +78,7 @@ class Servercmd(commands.Cog):
         arows = []
         totalroles = len(roles)
         for i in range(ceil(len(roles) / 5)):
-            roleset5 = roles[i * 5 : i * 5 + 5]
+            roleset5 = roles[i * 5: i * 5 + 5]
             arow = []
             for role in roleset5:
                 btn = create_button(
@@ -199,25 +199,25 @@ class Servercmd(commands.Cog):
         ],
     )
     async def _embedgen(
-        self,
-        ctx,
-        heading,
-        colour="#108adf",
-        content="",
-        small_img="",
-        large_img="",
-        link="",
-        footer="",
-        role_1=None,
-        role_2=None,
-        role_3=None,
-        role_4=None,
-        role_5=None,
-        role_6=None,
-        role_7=None,
-        role_8=None,
-        role_9=None,
-        role_10=None,
+            self,
+            ctx,
+            heading,
+            colour="#108adf",
+            content="",
+            small_img="",
+            large_img="",
+            link="",
+            footer="",
+            role_1=None,
+            role_2=None,
+            role_3=None,
+            role_4=None,
+            role_5=None,
+            role_6=None,
+            role_7=None,
+            role_8=None,
+            role_9=None,
+            role_10=None,
     ):
         if ctx.author.guild_permissions.manage_messages == False:
             await errorimg(
@@ -238,10 +238,10 @@ class Servercmd(commands.Cog):
             )
             return
         if (
-            len(heading) > 255
-            or len(content) > 4095
-            or len(footer) > 2047
-            or (
+                len(heading) > 255
+                or len(content) > 4095
+                or len(footer) > 2047
+                or (
                 len(heading)
                 + len(content)
                 + len(footer)
@@ -249,8 +249,8 @@ class Servercmd(commands.Cog):
                 + len(link)
                 + len(small_img)
                 + len(large_img)
-            )
-            > 5800
+        )
+                > 5800
         ):
             await errorimg(
                 "You exceeded the maximum character limit of some fields Chief!",

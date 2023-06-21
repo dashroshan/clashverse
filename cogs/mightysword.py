@@ -105,12 +105,12 @@ class Swordtracker(commands.Cog):
         record = collection.find_one({"tag": tag})
         misscount = record["misscount"]
         msg = (
-            "**Name: **"
-            + record["name"]
-            + "\n**Attacks missed: **"
-            + str(record["misscount"])
-            + "\n**1st miss: **"
-            + str(record["misses"][0].date())
+                "**Name: **"
+                + record["name"]
+                + "\n**Attacks missed: **"
+                + str(record["misscount"])
+                + "\n**1st miss: **"
+                + str(record["misses"][0].date())
         )
         if misscount == 2:
             msg += "\n**2nd miss: **" + str(record["misses"][1].date())
@@ -126,24 +126,24 @@ class Swordtracker(commands.Cog):
             msg += "`" + "None".ljust(40, " ") + "`\n"
         for i in collection.find({"misscount": 2}):
             msg += (
-                "`"
-                + i["name"].ljust(15, " ")
-                + " "
-                + str(i["misses"][0].date())
-                + "    "
-                + str(i["misses"][1].date())
-                + "`\n"
+                    "`"
+                    + i["name"].ljust(15, " ")
+                    + " "
+                    + str(i["misses"][0].date())
+                    + "    "
+                    + str(i["misses"][1].date())
+                    + "`\n"
             )
         msg += "**Missed one war attack:**\n"
         if countone == 0:
             msg += "`" + "None".ljust(40, " ") + "`\n"
         for j in collection.find({"misscount": 1}):
             msg += (
-                "`"
-                + j["name"].ljust(15, " ")
-                + " "
-                + str(j["misses"][0].date())
-                + "              `\n"
+                    "`"
+                    + j["name"].ljust(15, " ")
+                    + " "
+                    + str(j["misses"][0].date())
+                    + "              `\n"
             )
         return msg
 
