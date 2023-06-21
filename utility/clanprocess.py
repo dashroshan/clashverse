@@ -794,7 +794,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -813,7 +813,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
 
         },
         {
@@ -833,7 +833,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -852,7 +852,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -871,7 +871,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -890,7 +890,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -909,7 +909,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -928,7 +928,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -947,7 +947,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -966,7 +966,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -985,7 +985,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -1004,7 +1004,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -1023,7 +1023,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
         {
             "count": 0,
@@ -1042,7 +1042,7 @@ async def clanstatsfn(ctx, tag, cocc):
             "Frosty": 0,
             "Diggy": 0,
             "Poison Lizard": 0,
-            "Pheonix": 0,
+            "Phoenix": 0,
         },
     ]
     async for player in clan.get_detailed_members():
@@ -1291,7 +1291,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 img.paste(phoeniximg, (357, 118), phoeniximg)
             draw.text(
                 (375, 167),
-                newdata[i]["Unicorn"],
+                newdata[i]["Phoenix"],
                 fill=(255, 255, 255),
                 font=lvlfont,
                 stroke_width=2,
