@@ -730,15 +730,15 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
         image.seek(0)
         await ctx.send(
             file=discord_File(fp=image, filename=f"scoreboard.png"),
-            components=[
-                create_actionrow(
-                    create_button(
-                        style=ButtonStyle.URL,
-                        label="Enemy War Log",
-                        url=f"https://cocp.it/clan/{(war.opponent.tag)[1:]}",
-                    )
-                )
-            ],
+            #components=[
+            #    create_actionrow(
+            #        create_button(
+            #            style=ButtonStyle.URL,
+            #            label="Enemy War Log",
+            #            url=f"https://cocp.it/clan/{(war.opponent.tag)[1:]}",
+            #        )
+            #    )
+            #],
         )
 
 
