@@ -2,7 +2,7 @@
 from discord.ext import commands
 import pymongo
 from datetime import datetime, timedelta
-from secret import mongodb_url, swordchannel
+from secret import mongodb_url, swordchannel, swordguild
 from discord_slash import cog_ext
 from discord_slash.utils.manage_commands import create_option
 
@@ -178,7 +178,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-miss",
         description="Save war miss record of a member",
-        guild_ids=[401447829395996692],
+        guild_ids=swordguild,
         options=[
             create_option(
                 name="tag",
@@ -202,7 +202,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-info",
         description="Get all war miss records",
-        guild_ids=[401447829395996692],
+        guild_ids=[824268573798826034],
     )
     async def info(self, ctx):
         await ctx.defer()
@@ -215,7 +215,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-clear",
         description="Clear war miss records of a member",
-        guild_ids=[401447829395996692],
+        guild_ids=swordguild,
         options=[
             create_option(
                 name="tag",

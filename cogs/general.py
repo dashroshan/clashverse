@@ -123,7 +123,7 @@ class Generalcmnds(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_join(self, guild):
-        logc = self.bot.get_channel(861717095740604426)
+        logc = self.bot.get_channel(824268574273175593)
         botc, userc = 0, 0
         for m in guild.members:
             if m.bot == True:
@@ -149,7 +149,7 @@ class Generalcmnds(commands.Cog):
 
     @commands.Cog.listener()
     async def on_guild_remove(self, guild):
-        logc = self.bot.get_channel(861717095740604426)
+        logc = self.bot.get_channel(824268574273175593)
         botc, userc = 0, 0
         for m in guild.members:
             if m.bot == True:

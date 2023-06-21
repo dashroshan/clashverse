@@ -217,7 +217,7 @@ async def clanwar_lineupfn(ctx, tag, cocc):
         for hero in member.heroes:
             if hero.is_home_base:
                 herosum += hero.level / hero.max_level
-        for pet in member.hero_pets:
+        for pet in member.pets:
             petsum += pet.level
         for spell in member.spells:
             spellsum += spell.level / spell.max_level
@@ -743,21 +743,21 @@ async def clanwar_scoreboardfn(ctx, tag, cocc):
 
 
 maxherolvl = {
+    "15": ["90", "90", "65", "40"],
     "14": ["80", "80", "55", "30"],
     "13": ["75", "75", "50", "25"],
-    "12": ["65", "65", "40", "200"],
-    "11": ["50", "50", "20", "200"],
-    "10": ["40", "40", "200", "200"],
-    "9": ["30", "30", "200", "200"],
-    "8": ["10", "200", "200", "200"],
-    "7": ["5", "200", "200", "200"],
-    "6": ["200", "200", "200", "200"],
-    "5": ["200", "200", "200", "200"],
-    "4": ["200", "200", "200", "200"],
-    "4": ["200", "200", "200", "200"],
-    "3": ["200", "200", "200", "200"],
-    "2": ["200", "200", "200", "200"],
-    "1": ["200", "200", "200", "200"],
+    "12": ["65", "65", "40", "0"],
+    "11": ["50", "50", "20", "0"],
+    "10": ["40", "40", "0", "0"],
+    "9": ["30", "30", "0", "0"],
+    "8": ["10", "0", "0", "0"],
+    "7": ["5", "0", "0", "0"],
+    "6": ["0", "0", "0", "0"],
+    "5": ["0", "0", "0", "0"],
+    "4": ["0", "0", "0", "0"],
+    "3": ["0", "0", "0", "0"],
+    "2": ["0", "0", "0", "0"],
+    "1": ["0", "0", "0", "0"],
 }
 
 
@@ -791,6 +791,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -806,6 +810,11 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
+
         },
         {
             "count": 0,
@@ -821,6 +830,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -836,6 +849,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -851,6 +868,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -866,6 +887,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -881,6 +906,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -896,6 +925,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -911,6 +944,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -926,6 +963,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -941,6 +982,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -956,6 +1001,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -971,6 +1020,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
         {
             "count": 0,
@@ -986,6 +1039,10 @@ async def clanstatsfn(ctx, tag, cocc):
             "L.A.S.S.I": 0,
             "Mighty Yak": 0,
             "Unicorn": 0,
+            "Frosty": 0,
+            "Diggy": 0,
+            "Poison Lizard": 0,
+            "Pheonix": 0,
         },
     ]
     async for player in clan.get_detailed_members():
@@ -997,7 +1054,7 @@ async def clanstatsfn(ctx, tag, cocc):
         data[th]["trophies"] += player.trophies
         data[th]["donations"] += player.donations
         heroes = player.heroes
-        pets = player.hero_pets
+        pets = player.pets
         for i in heroes:
             try:
                 data[th][i.name] += i.level
@@ -1033,6 +1090,10 @@ async def clanstatsfn(ctx, tag, cocc):
     owlimg = Image.open("utility/assets/comp/owl.png")
     yakimg = Image.open("utility/assets/comp/yak.png")
     unicornimg = Image.open("utility/assets/comp/unicorn.png")
+    frostyimg = Image.open("utility/assets/comp/frosty.png")
+    diggyimg = Image.open("utility/assets/comp/diggy.png")
+    lizardimg = Image.open("utility/assets/comp/lizard.png")
+    phoeniximg = Image.open("utility/assets/comp/phoenix.png")
     labelimg = Image.open("utility/assets/comp/label.png")
 
     bkimg1 = Image.open("utility/assets/comp/bkmax1.png")
@@ -1047,6 +1108,11 @@ async def clanstatsfn(ctx, tag, cocc):
     owlimg1 = Image.open("utility/assets/comp/owlmax.png")
     yakimg1 = Image.open("utility/assets/comp/yakmax.png")
     unicornimg1 = Image.open("utility/assets/comp/unicornmax.png")
+    frostyimg1 = Image.open("utility/assets/comp/frostymax.png")
+    diggyimg1 = Image.open("utility/assets/comp/diggymax.png")
+    lizardimg1 = Image.open("utility/assets/comp/lizardmax.png")
+    phoeniximg1 = Image.open("utility/assets/comp/phoenixmax.png")
+    labelimg1 = Image.open("utility/assets/comp/label.png")
 
     files = []
 
@@ -1057,7 +1123,7 @@ async def clanstatsfn(ctx, tag, cocc):
         img.paste(thimg, (14, 14), thimg)
 
         if newdata[i]["Barbarian King"] != "0":
-            if newdata[i]["Barbarian King"] == "80":
+            if newdata[i]["Barbarian King"] == "90":
                 img.paste(bkimg1, (159, 17), bkimg1)
             elif maxherolvl[newdata[i]["th"]][0] == newdata[i]["Barbarian King"]:
                 img.paste(bkimg2, (159, 17), bkimg2)
@@ -1073,7 +1139,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Archer Queen"] != "0":
-            if newdata[i]["Archer Queen"] == "80":
+            if newdata[i]["Archer Queen"] == "90":
                 img.paste(aqimg1, (225, 17), aqimg1)
             elif maxherolvl[newdata[i]["th"]][1] == newdata[i]["Archer Queen"]:
                 img.paste(aqimg2, (225, 17), aqimg2)
@@ -1089,7 +1155,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Grand Warden"] != "0":
-            if newdata[i]["Grand Warden"] == "55":
+            if newdata[i]["Grand Warden"] == "65":
                 img.paste(gwimg1, (291, 17), gwimg1)
             elif maxherolvl[newdata[i]["th"]][2] == newdata[i]["Grand Warden"]:
                 img.paste(gwimg2, (291, 17), gwimg2)
@@ -1105,7 +1171,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Royal Champion"] != "0":
-            if newdata[i]["Royal Champion"] == "30":
+            if newdata[i]["Royal Champion"] == "40":
                 img.paste(rcimg1, (357, 17), rcimg1)
             elif maxherolvl[newdata[i]["th"]][3] == newdata[i]["Royal Champion"]:
                 img.paste(rcimg2, (357, 17), rcimg2)
@@ -1121,7 +1187,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["L.A.S.S.I"] != "0":
-            if newdata[i]["L.A.S.S.I"] == "10":
+            if newdata[i]["L.A.S.S.I"] == "15":
                 img.paste(lassiimg1, (159, 118), lassiimg1)
             else:
                 img.paste(lassiimg, (159, 118), lassiimg)
@@ -1135,7 +1201,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Electro Owl"] != "0":
-            if newdata[i]["Electro Owl"] == "10":
+            if newdata[i]["Electro Owl"] == "15":
                 img.paste(owlimg1, (225, 118), owlimg1)
             else:
                 img.paste(owlimg, (225, 118), owlimg)
@@ -1149,7 +1215,7 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Mighty Yak"] != "0":
-            if newdata[i]["Mighty Yak"] == "10":
+            if newdata[i]["Mighty Yak"] == "15":
                 img.paste(yakimg1, (291, 118), yakimg1)
             else:
                 img.paste(yakimg, (291, 118), yakimg)
@@ -1163,10 +1229,66 @@ async def clanstatsfn(ctx, tag, cocc):
                 anchor="mm",
             )
         if newdata[i]["Unicorn"] != "0":
-            if newdata[i]["Unicorn"] == "10":
+            if newdata[i]["Unicorn"] == "15":
                 img.paste(unicornimg1, (357, 118), unicornimg1)
             else:
                 img.paste(unicornimg, (357, 118), unicornimg)
+            draw.text(
+                (375, 167),
+                newdata[i]["Unicorn"],
+                fill=(255, 255, 255),
+                font=lvlfont,
+                stroke_width=2,
+                stroke_fill=(0, 0, 0),
+                anchor="mm",
+            )
+        if newdata[i]["Frosty"] != "0":
+            if newdata[i]["Frosty"] == "10":
+                img.paste(frostyimg1, (357, 118), frostyimg1)
+            else:
+                img.paste(frostyimg, (357, 118), frostyimg)
+            draw.text(
+                (375, 167),
+                newdata[i]["Frosty"],
+                fill=(255, 255, 255),
+                font=lvlfont,
+                stroke_width=2,
+                stroke_fill=(0, 0, 0),
+                anchor="mm",
+            )
+        if newdata[i]["Diggy"] != "0":
+            if newdata[i]["Diggy"] == "10":
+                img.paste(diggyimg1, (357, 118), diggyimg1)
+            else:
+                img.paste(diggyimg, (357, 118), diggyimg)
+            draw.text(
+                (375, 167),
+                newdata[i]["Diggy"],
+                fill=(255, 255, 255),
+                font=lvlfont,
+                stroke_width=2,
+                stroke_fill=(0, 0, 0),
+                anchor="mm",
+            )
+        if newdata[i]["Poison Lizard"] != "0":
+            if newdata[i]["Poison Lizard"] == "10":
+                img.paste(lizardimg1, (357, 118), lizardimg1)
+            else:
+                img.paste(lizardimg, (357, 118), lizardimg)
+            draw.text(
+                (375, 167),
+                newdata[i]["Poison Lizard"],
+                fill=(255, 255, 255),
+                font=lvlfont,
+                stroke_width=2,
+                stroke_fill=(0, 0, 0),
+                anchor="mm",
+            )
+        if newdata[i]["Phoenix"] != "0":
+            if newdata[i]["Phoenix"] == "10":
+                img.paste(phoeniximg1, (357, 118), phoeniximg1)
+            else:
+                img.paste(phoeniximg, (357, 118), phoeniximg)
             draw.text(
                 (375, 167),
                 newdata[i]["Unicorn"],
@@ -1264,20 +1386,22 @@ async def clanstatsfn(ctx, tag, cocc):
 
 
 supertroops = {
-    1: ["Super Barbarian", "Barbarian", "10"],
-    2: ["Super Archer", "Archer", "10"],
-    3: ["Super Giant", "Giant", "10"],
-    4: ["Sneaky Goblin", "Goblin", "8"],
-    5: ["Super Wall Breaker", "Wall Breaker", "10"],
+    1: ["Super Barbarian", "Barbarian", "11"],
+    2: ["Super Archer", "Archer", "11"],
+    3: ["Super Giant", "Giant", "11"],
+    4: ["Sneaky Goblin", "Goblin", "9"],
+    5: ["Super Wall Breaker", "Wall Breaker", "11"],
     6: ["Rocket Balloon", "Balloon", "10"],
-    7: ["Super Wizard", "Wizard", "10"],
-    8: ["Inferno Dragon", "Baby Dragon", "8"],
-    9: ["Super Minion", "Minion", "10"],
-    10: ["Super Valkyrie", "Valkyrie", "9"],
-    11: ["Super Witch", "Witch", "5"],
+    7: ["Super Wizard", "Wizard", "11"],
+    8: ["Inferno Dragon", "Baby Dragon", "9"],
+    9: ["Super Minion", "Minion", "11"],
+    10: ["Super Valkyrie", "Valkyrie", "10"],
+    11: ["Super Witch", "Witch", "6"],
     12: ["Ice Hound", "Lava Hound", "6"],
-    13: ["Super Bowler", "Bowler", "6"],
-    14: ["Super Dragon", "Dragon", "9"],
+    13: ["Super Bowler", "Bowler", "7"],
+    14: ["Super Dragon", "Dragon", "10"],
+    15: ["Super Miner", "Miner", "9"],
+    16: ["Super Hog Rider", "Hog Rider", "12"],
 }
 
 

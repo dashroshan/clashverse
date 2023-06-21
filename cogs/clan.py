@@ -141,6 +141,8 @@ class Clan(commands.Cog):
                     create_choice(name="Ice Hound", value="12"),
                     create_choice(name="Super Bowler", value="13"),
                     create_choice(name="Super Dragon", value="14"),
+                    create_choice(name="Super Miner", value="15"),
+                    create_choice(name="Super Hog Rider", value="16"),
                 ],
             ),
             create_option(
