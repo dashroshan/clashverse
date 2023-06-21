@@ -202,7 +202,7 @@ class Swordtracker(commands.Cog):
     @cog_ext.cog_slash(
         name="sword-info",
         description="Get all war miss records",
-        guild_ids=[824268573798826034],
+        guild_ids=swordguild,
     )
     async def info(self, ctx):
         await ctx.defer()
